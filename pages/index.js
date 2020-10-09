@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useCallback, useEffect, useRef } from "react";
 
 import { Root } from "../components/Root/Root";
-import { Wrapper } from "./styled";
+import Wrapper from "./styled";
 
 import { useAppHooks } from "../components/context/AppHooks";
 

@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef } from "react";
 
 import { useAppHooks } from "../../components/context/AppHooks";
 
-import { Wrapper } from "./styled";
+import Wrapper from "./styled";
 
 const About = () => {
   const { setContentScroll } = useAppHooks();

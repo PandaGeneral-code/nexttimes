@@ -1,6 +1,6 @@
 import React from "react";
 
-import { RootWrapper } from "./styled";
+import RootWrapper from "./styled";
 
 export const Root = () => {
   return (
