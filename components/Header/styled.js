@@ -13,9 +13,15 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledLink = styled.a`
-  color: ${(props) => props.theme.shipGray};
+  color: ${(props) =>
+    props.active ? props.theme.internationalOrange : props.theme.shipGray};
   font-weight: 900;
   letter-spacing: 3px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: ${(props) => props.theme.internationalOrange};
+  }
 `;
 
 export const StyledMenuIcon = styled(MenuOutlined)``;

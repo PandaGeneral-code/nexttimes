@@ -44,13 +44,17 @@ export const Header = () => {
       </LogoLinkContainer>
       <LinksContainer collapsed={isCollapsed}>
         <Link href="/websites">
-          <StyledLink>websites</StyledLink>
+          <StyledLink active={router.pathname === "/websites"}>
+            websites
+          </StyledLink>
         </Link>
         <Link href="/advertising">
-          <StyledLink>advertising</StyledLink>
+          <StyledLink active={router.pathname === "/advertising"}>
+            advertising
+          </StyledLink>
         </Link>
         <Link href="/design">
-          <StyledLink>design</StyledLink>
+          <StyledLink active={router.pathname === "/design"}>design</StyledLink>
         </Link>
         <StyledMenuIcon onClick={handleMenuDrawerOpen} />
       </LinksContainer>
