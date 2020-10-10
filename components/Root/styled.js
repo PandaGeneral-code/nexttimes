@@ -8,6 +8,20 @@ const RootWrapper = styled.div`
   overflow: hidden auto;
   padding: 1rem 0 0 0;
 
+  button {
+    background-color: ${(props) => props.theme.internationalOrange};
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 1rem 1rem;
+    outline: none;
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+
   h1 {
     color: ${({ theme: { white } }) => white};
     font-size: 30px;
@@ -25,14 +39,15 @@ const RootWrapper = styled.div`
     line-height: 1.4em;
     margin: 0 1rem 1rem 1rem;
   }
+
+  p {
+    color: white;
+    font-weight: 400;
+    line-height: 1.8rem;
+    margin: 0 1rem 1rem 1rem;
+  }
 `;
 
-export const ContainerWrapper = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin: 0 1rem 1rem; 1rem;
-
-`;
+export const ContainerWrapper = styled.div``;
 
 export default RootWrapper;
