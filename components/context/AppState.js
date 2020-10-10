@@ -9,7 +9,7 @@ const initialState = {
   contentScroll: 0,
   drawerVisibility: {
     contact: false,
-    menu: true,
+    menu: false,
   },
 };
 

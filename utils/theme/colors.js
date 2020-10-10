@@ -6,3 +6,4 @@ export const riverBed = "#424F5B";
 export const shadow = `#8C704B`;
 export const shipGray = "#414042";
 export const shuttleGray = "#576877";
+export const white = "#ffffff";
