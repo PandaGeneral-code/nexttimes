@@ -37,14 +37,14 @@ const RootWrapper = styled.div`
     font-weight: 900;
     letter-spacing: 5px;
     line-height: 1.4em;
-    margin: 0 1rem 1rem 1rem;
+    margin: 0;
   }
 
   p {
-    color: white;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.8rem;
-    margin: 0 1rem 1rem 1rem;
+    margin: 0;
   }
 `;
 

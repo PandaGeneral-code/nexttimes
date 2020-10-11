@@ -27,13 +27,15 @@ export const AnimatedListItem = styled(motion.li)`
   }
 
   p {
-    color: ${(props) =>
-      props.theme.lighten(
-        props.customStyle.text.color.colorName,
-        props.customStyle.text.color.opacity
-      )};
+    color: ${({
+      customStyle: {
+        text: {
+          color: { colorName, opacity },
+        },
+      },
+      theme: { lighten },
+    }) => lighten(colorName, opacity)};
     font-size: 18px;
-    line-height: 1.7rem;
     margin: 1rem 0 0 0;
     padding: 0;
     text-align: center;
