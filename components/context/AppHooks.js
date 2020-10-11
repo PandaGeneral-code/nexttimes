@@ -1,9 +1,11 @@
-import { useCallback, useContext } from "react";
+import { useCallback, useEffect, useContext } from "react";
 
 import { AppContext, setContentScroll, setDrawerVisibility } from "./AppState";
 
 export const useAppHooks = () => {
   const { dispatch, state } = useContext(AppContext);
+
+  useEffect(() => {}, [state.contentScroll]);
 
   return {
     setContentScroll: useCallback(

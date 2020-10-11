@@ -1,60 +1,66 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const SmallTile = styled(motion.div).attrs(
-  ({ animationProps: { direction, id } }) => ({
-    animate: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-    },
-    initial: {
-      opacity: 0,
-      x: direction === "left" ? -200 : direction === "right" ? 200 : 0,
-      y: direction === "top" ? -200 : direction === "bottom" ? 200 : 0,
-    },
-    layoutId: id,
-    transition: { duration: 0.5, ease: "easeInOut" },
-  })
-)`
+export const AnimatedListItem = styled(motion.li)`
   align-items: center;
   background-color: ${(props) =>
-    props.theme[props.customStyle.background.colorName]};
+    props.theme[props.customStyle.backgroundColor.colorName]};
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-column-start: span
-    ${(props) =>
-      props.animationProps.id === props.animationProps.selected ? "2" : "1"};
-  padding: 1rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 3rem;
+
+  &:last-child {
+    margin: 0;
+  }
 
   h4 {
-    color: ${(props) =>
-      props.theme[props.customStyle.heading.color.color.colorName]};
+    color: ${(props) => props.theme[props.customStyle.title.color.colorName]};
+    font-size: 18px;
     font-weight: 900;
     letter-spacing: 5px;
-    line-height: 1.4rem;
-    margin: 0.25rem 0 0.5rem 0;
+    margin: 2rem 0 0 0;
     text-align: center;
   }
 
   p {
-    color: ${(props) => {
-      props.theme.lighten();
-      return props.theme.lighten(props.customStyle.text.color, 0.7);
-    }};
-    margin: 0;
+    color: ${(props) =>
+      props.theme.lighten(
+        props.customStyle.text.color.colorName,
+        props.customStyle.text.color.opacity
+      )};
+    font-size: 18px;
+    line-height: 1.7rem;
+    margin: 1rem 0 0 0;
     padding: 0;
     text-align: center;
   }
 `;
 
 const Wrapper = styled.div`
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin: 0 1rem 1rem 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+
+  ul,
+  AnimatedListItem {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    padding: 1rem;
+  }
 `;
 
 export default Wrapper;
