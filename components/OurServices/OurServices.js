@@ -75,7 +75,7 @@ export const OurServices = () => {
                 title: { color: { colorName: "doveGray" } },
               },
               text:
-                "From logos and branding to brochures and flyers. Concepts proudly created here in Australia. As with most things the better the brief the better the outcome.",
+                "Extensive network of suppliers including printers, promotional suppliers, app developers, video and audio editors, media companies, photographers and writers.",
               title: {
                 color: { colorName: "doveGray" },
                 text: "Support marketing",

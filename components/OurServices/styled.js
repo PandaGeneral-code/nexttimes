@@ -11,7 +11,7 @@ export const AnimatedListItem = styled(motion.li)`
   justify-content: center;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 3rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
 
   &:last-child {
     margin: 0;
@@ -19,10 +19,7 @@ export const AnimatedListItem = styled(motion.li)`
 
   h4 {
     color: ${(props) => props.theme[props.customStyle.title.color.colorName]};
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 5px;
-    margin: 2rem 0 0 0;
+    margin: 0.5rem 0 0.5rem 0;
     text-align: center;
   }
 
@@ -35,9 +32,6 @@ export const AnimatedListItem = styled(motion.li)`
       },
       theme: { lighten },
     }) => lighten(colorName, opacity)};
-    font-size: 18px;
-    margin: 1rem 0 0 0;
-    padding: 0;
     text-align: center;
   }
 `;
