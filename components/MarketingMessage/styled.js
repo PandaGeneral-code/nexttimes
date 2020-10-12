@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const ChartLabel = styled.div`
   align-self: flex-start;
+  font-size: 15px;
   font-weight: 700;
   margin: 0;
   padding: 0;
