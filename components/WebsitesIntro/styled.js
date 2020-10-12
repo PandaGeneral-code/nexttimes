@@ -39,8 +39,7 @@ const Wrapper = styled.div`
     font-weight: 900;
     letter-spacing: 0.5rem;
     line-height: 3rem;
-    margin: 1rem;
-    padding: 0;
+    padding: 1rem;
   }
 `;
 
