@@ -2,7 +2,11 @@ import React from "react";
 
 import Wrapper from "./styled";
 
+import { useAppHooks } from "../context/AppHooks";
+
 export const Intro = () => {
+  const { setDrawerVisibility } = useAppHooks();
+
   return (
     <Wrapper>
       <h4>Build your business today</h4>
@@ -15,7 +19,9 @@ export const Intro = () => {
         Great creative work is thought provoking and works hard connecting your
         business with your customers.
       </p>
-      <button>Contact us</button>
+      <button onClick={() => setDrawerVisibility({ contact: true })}>
+        Contact us
+      </button>
       <h1>Our services</h1>
       <p>
         We offer a full creative set of services for business all times and

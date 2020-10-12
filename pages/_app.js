@@ -4,9 +4,9 @@ import { ThemeProvider } from "styled-components";
 
 import { AppContextProvider } from "../components/context/AppState";
 import { Header } from "../components/Header/Header";
-import * as theme from "../utils/theme/index";
-
+import { ContactDrawer } from "../components/ContactDrawer/ContactDrawer";
 import { MenuDrawer } from "../components/MenuDrawer/MenuDrawer";
+import * as theme from "../utils/theme/index";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         <Header />
         <Component {...pageProps} />
         <MenuDrawer />
+        <ContactDrawer />
       </ThemeProvider>
     </AppContextProvider>
   );

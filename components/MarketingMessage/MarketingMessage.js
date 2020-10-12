@@ -3,6 +3,7 @@ import { useCountUp } from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 import Wrapper, {
+  ChartLabel,
   GraphContainer,
   StyledProgress,
   StyledProgressBar,
@@ -17,6 +18,9 @@ export const MarketingMessage = () => {
   const { countUp: CR } = useCountUp({ end: 20 });
   const { countUp: MST } = useCountUp({ end: 60 });
   const { countUp: WEH } = useCountUp({ end: 70 });
+  const { countUp: BS } = useCountUp({ end: 55 });
+  const { countUp: MS } = useCountUp({ end: 85 });
+  const { countUp: SM } = useCountUp({ end: 70 });
   const [ref, inView] = useInView({ threshold: 0.75, triggerOnce: true });
   const [secondRef, secondInView] = useInView({
     threshold: 0.75,
@@ -46,7 +50,7 @@ export const MarketingMessage = () => {
         A lot of advertising and marketing is wasted because messages are
         inconsistent and branding is confusing. Building a consistent “look”,
         “feel” and “sound” to your marketing will pay off in the long run by
-        making it
+        making it{" "}
         <a
           href="https://hbr.org/2017/03/what-creativity-in-marketing-looks-like-today"
           target="_blank"
@@ -73,43 +77,90 @@ export const MarketingMessage = () => {
       </GraphContainer>
       <h1>Our specialties</h1>
       <GraphContainer ref={secondRef}>
-        <p>WEB DESIGN AND DEVELOPMENT</p>
+        <ChartLabel>WEB DESIGN AND DEVELOPMENT</ChartLabel>
         <StyledProgressBar
           color="internationalOrange"
           percent={secondInView ? WDD : 0}
           showInfo={false}
         />
-        <p>ADVERTISING CREATION</p>
+        <ChartLabel>ADVERTISING CREATION</ChartLabel>
         <StyledProgressBar
           color="internationalOrange"
           percent={secondInView ? AC : 0}
           showInfo={false}
         />
-        <p>LOGO AND IDENTITY DESIGN</p>
+        <ChartLabel>LOGO AND IDENTITY DESIGN</ChartLabel>
         <StyledProgressBar
           color="internationalOrange"
           percent={secondInView ? LDD : 0}
           showInfo={false}
         />
-        <p>CONSUMER RESEARCH</p>
+        <ChartLabel>CONSUMER RESEARCH</ChartLabel>
         <StyledProgressBar
           color="internationalOrange"
           percent={secondInView ? CR : 0}
           showInfo={false}
         />
-        <p>MARKETING STRATEGY AND TACTICS</p>
+        <ChartLabel>MARKETING STRATEGY AND TACTICS</ChartLabel>
         <StyledProgressBar
           color="internationalOrange"
           percent={secondInView ? MST : 0}
           showInfo={false}
         />
-        <p>WEBSITE AND EMAIL HOSTING</p>
+        <ChartLabel>WEBSITE AND EMAIL HOSTING</ChartLabel>
         <StyledProgressBar
           color="internationalOrange"
           percent={secondInView ? WEH : 0}
           showInfo={false}
         />
+        <ChartLabel>BRAND STRATEGY</ChartLabel>
+        <StyledProgressBar
+          color="internationalOrange"
+          percent={secondInView ? BS : 0}
+          showInfo={false}
+        />
+        <ChartLabel>MARKETING STRATEGY</ChartLabel>
+        <StyledProgressBar
+          color="internationalOrange"
+          percent={secondInView ? MS : 0}
+          showInfo={false}
+        />
+        <ChartLabel>SOCIAL MEDIA</ChartLabel>
+        <StyledProgressBar
+          color="internationalOrange"
+          percent={secondInView ? SM : 0}
+          showInfo={false}
+        />
       </GraphContainer>
+      <p style={{ margin: "1rem 0 1rem 0", textAlign: "left" }}>
+        Tiemens Creative can be your own “one-stop shop” in-house marketing
+        department without paying the costs of staff and expensive contracts.
+      </p>
+      <p style={{ margin: "1rem 0 1rem 0", textAlign: "left" }}>
+        The business founder Darrell Tiemens has more than twenty-four years in
+        the advertising and marketing profession with extensive experience,
+        connections, and a big international network.
+      </p>
+      <p style={{ margin: "1rem 0 1rem 0", textAlign: "left" }}>
+        The tools of our trade are our creativity, big Mac computers, cameras,
+        our fast broadband, our Adobe software and, of course, our coffee
+        machine!
+      </p>
+      <p style={{ margin: "1rem 0 1rem 0", textAlign: "left" }}>
+        To see how we can apply the tools of our trade to your business please
+        call us.
+      </p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        <a href="tel:+61411572926">
+          <button>Let's chat</button>
+        </a>
+      </div>
     </Wrapper>
   );
 };

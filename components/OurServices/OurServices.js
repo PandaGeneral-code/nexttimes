@@ -1,3 +1,4 @@
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -106,6 +107,25 @@ export const OurServices = () => {
                   </motion.p>
                 )}
               </AnimatePresence>
+              {selected === item.key ? (
+                <motion.div layout>
+                  <UpOutlined
+                    style={{
+                      color:
+                        item.key === "supportMarketing" ? "black" : "white",
+                    }}
+                  />
+                </motion.div>
+              ) : (
+                <motion.div layout>
+                  <DownOutlined
+                    style={{
+                      color:
+                        item.key === "supportMarketing" ? "black" : "white",
+                    }}
+                  />
+                </motion.div>
+              )}
             </AnimatedListItem>
           ))}
         </motion.ul>

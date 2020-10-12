@@ -2,6 +2,7 @@ export const blackHaze = "#F1F2F2";
 export const ebonyClay = "#253542";
 export const doveGray = "#666666";
 export const downy = "#63C4C9";
+export const gulfStream = "#79ABAB";
 export const internationalOrange = "#FF4F00";
 export const oxfordBlue = "#2C3C48";
 export const mineShaft = "#333333";

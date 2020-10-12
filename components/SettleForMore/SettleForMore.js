@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 import Wrapper from "./styled";
 
 export const SettleForMore = () => {
+  const router = useRouter();
+
   return (
     <Wrapper>
       <h1>Settle for more</h1>
@@ -26,7 +29,7 @@ export const SettleForMore = () => {
         advertising, design and marketing agency in east Australia. Too
         ambitious? We don’t think so.
       </p>
-      <button>Get started</button>
+      <button onClick={() => router.push("/websites")}>Get started</button>
     </Wrapper>
   );
 };

@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { useCallback, useEffect, useRef } from "react";
 
+import { useAppHooks } from "../components/context/AppHooks";
 import { Root } from "../components/Root/Root";
 import Wrapper from "./styled";
-
-import { useAppHooks } from "../components/context/AppHooks";
 
 export default function Home() {
   const { setContentScroll } = useAppHooks();
