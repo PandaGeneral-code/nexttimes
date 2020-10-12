@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { useCallback, useEffect, useRef } from "react";
 
 import { useAppHooks } from "../components/context/AppHooks";
@@ -33,6 +34,7 @@ export default function Home() {
       <Head>
         <title>New Times</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Tiemens Creative" />
       </Head>
       <Root />
     </Wrapper>

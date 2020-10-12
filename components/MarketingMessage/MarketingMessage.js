@@ -53,6 +53,7 @@ export const MarketingMessage = () => {
         making it{" "}
         <a
           href="https://hbr.org/2017/03/what-creativity-in-marketing-looks-like-today"
+          rel="noopener noreferrer"
           target="_blank"
         >
           easier for your customers{" "}

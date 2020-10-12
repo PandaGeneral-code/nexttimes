@@ -93,7 +93,7 @@ export const OurServices = () => {
                 )
               }
             >
-              <motion.img layout src={item.imageUrl} />
+              <motion.img alt={item.key} layout src={item.imageUrl} />
               <motion.h4 layout>{item.title.text}</motion.h4>
               <AnimatePresence>
                 {selected === item.key && (
